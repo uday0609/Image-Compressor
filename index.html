@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image compressor</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1><b>Image Compressor</b></h1>
+		<input type="file" id="upload"/>
+		<div class="controls">
+			<label>Width:</label>
+			<input type="number" id="width" placeholder="Enter image width"/>
+			<label>Height:</label>
+			<input type="number" id="height" placeholder="Enter image height"/>
+			<label>Compressor (%):</label>
+			<input type="number"  id="compression" min="1" max="100" placeholder="Enter image compression %">
+		</div>
+		<button id="compressImageByButton">Compress Image</button>
+		<canvas id="hideImage" style="display:none"></canvas>
+		<div class="compressed">
+			<h2>Compressed Image</h2>
+			<img id="CompressImage" alt="Compressed image will be displayed here" />
+			<br/><br/>
+			<a id="download" style="display:none" download="CompressImage.jpeg">Download Compressed Image</a>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
